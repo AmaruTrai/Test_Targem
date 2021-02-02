@@ -1,5 +1,5 @@
 #include "DString.h"
-#include <iostream>
+
 
 // Constructor
 DString::DString() 
@@ -167,7 +167,6 @@ char DString::At(size_t i) const
 			current = current->nextSym;
 		}
 		reply = current->sym;
-		std::cout << reply;
 	}
 	return reply;
 }
