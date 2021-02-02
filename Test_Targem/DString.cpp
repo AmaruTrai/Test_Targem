@@ -176,14 +176,11 @@ char DString::At(size_t i) const
 // Operator += overloading
 DString& operator+= (DString& left, const DString& right)
 {
-	DString dstring(right);
-	dstring.startSym_->previousSym = left.endSym_->previousSym;
-	left.endSym_->previousSym->nextSym = dstring.startSym_;
-	left.endSym_ = dstring.endSym_;
-	left.size_ = left.size_+ dstring.size_;
-	dstring.endSym_ = nullptr;
-	dstring.startSym_ = nullptr;
-	dstring.size_ = 0;
+	size_t dstrSize = right.Size();
+	for (size_t i = 0; i < dstrSize; ++i)
+	{
+		left.Insert(right.At(i));
+	}
 	return left;
 }
 
