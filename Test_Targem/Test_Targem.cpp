@@ -11,11 +11,11 @@ using namespace std;
 void Print_DStringVector(vector<DString>& dV)
 {
 	size_t dVSize = dV.size();
-	for (int i = 0; i < dVSize; ++i)
+	for (size_t i = 0; i < dVSize; ++i)
 	{
 		cout << "         ";
 		size_t sizeD = dV.at(i).Size();
-		for (int j = 0; j < sizeD; ++j)
+		for (size_t j = 0; j < sizeD; ++j)
 		{
 			cout << dV.at(i).At(j);
 		}
@@ -47,7 +47,7 @@ int main()
 	cout << endl;
 	cout << "Enter your lines of text (To complete the entry, enter ^Z or use the combination 'CTRL + Z' on a new line)" << endl;
 	cout << endl;
-
+	cout << "         ";
 	vector<DString> dVin = { DString ()};
 	size_t dVinSize = 0;
 	while(!cin.eof())
@@ -57,6 +57,7 @@ int main()
 			cin.get();
 			dVin.push_back(DString());
 			++dVinSize;
+			cout << "         ";
 		}
 		else
 		{
