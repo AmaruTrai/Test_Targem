@@ -21,9 +21,15 @@
     <ClCompile Include="DString.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Compare.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DString.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Compare.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
   </ItemGroup>
